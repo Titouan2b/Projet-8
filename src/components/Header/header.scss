@@ -1,0 +1,94 @@
+@import "../../styles/var.scss";
+
+
+
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 70%;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 25px;
+    
+    img{
+        width: 25%;
+    }
+
+    nav{
+
+        ul{
+
+            display: flex;
+            gap: 25px;
+
+            li{
+
+                list-style: none;
+
+            }
+
+            a{
+
+                font-family: 'Montserrat', sans-serif;
+                color: $main-color;
+                text-decoration: none;
+                font-size: 24px;
+                font-weight: 500;
+
+                
+
+            }
+
+            .nav-active{
+                text-decoration: underline;
+
+                &::after{
+                    content: "";
+                    height: 4px;
+                    width: 0;
+                    background: $main-color;
+                    position: absolute;
+                    bottom: 0px;
+                    left: 50%;
+                }
+
+                
+
+            }
+            .desktop{
+                display: block;
+            }
+            .phone{
+                display: none;
+            }
+
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header{
+        width: 90%;
+        img{
+            width: 45%;
+        }
+        nav{
+            ul{
+                a{
+                    font-size: 20px;
+                }
+                .desktop{
+                    display: none;
+                }
+                .phone{
+                    display: block;
+                }
+            }
+            
+        }
+        
+    }
+}
