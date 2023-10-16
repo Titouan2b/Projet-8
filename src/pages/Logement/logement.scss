@@ -1,0 +1,91 @@
+@import "../../styles/var.scss";
+
+
+.main-logement{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 15px auto;
+    margin-top: 25px;
+    color: $main-color;
+    gap: 25px;
+
+    h1{
+        font-size: 36px;
+        font-weight: 500;
+    }
+}
+
+.collapses{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+    gap: 25px;
+
+}
+
+.description{
+    display: flex;
+    justify-content: space-between;
+
+    .desc-left{
+        & p{
+            margin-bottom: 25px;
+        }
+    }
+
+    & .desc-right{
+
+        p{
+            text-align: right;
+        }
+
+        & .host{
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+            & img{
+                width: 75px;
+                border-radius: 75px;
+            }
+            
+            p{
+                font-weight: 500;
+                font-size: 18px;
+                width: 100px;
+                margin-right: 5px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main-logement{
+        width: 90%;
+        .description{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+        }
+        .desc-right{
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+            .host{
+                img{
+                    width: 50px;
+                }
+            }
+        }
+
+        .collapses{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}

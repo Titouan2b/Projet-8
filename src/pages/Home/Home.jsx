@@ -4,9 +4,10 @@ import Header from '../../components/Header/Header'
 import Banner from '../../components/Banner/Banner'
 import Footer from '../../components/Footer/Footer'
 import Card from '../../components/Card/Card'
+import img from "../../assets/IMG.png"
 
 export default function Home() {
-    const [logements, setLogements] = useState()
+    const [logements, setLogements] = useState([])
 
     useEffect(() => {
         fetch("./logement.json")
@@ -21,10 +22,10 @@ export default function Home() {
   return (
     <div>
         <Header/>
-        <Banner/>
-        <div>
+        <Banner imgSrc={img} title="Chez vous, partout et ailleurs"/>
+        <div className='cards'>
             {logements.map((logement) => (
-                <Card key={logement.id} title={logement.title}/>
+                <Card key={logement.id} id={logement.id} title={logement.title} cover={logement.cover}/>  
             ))}
         </div>
         <Footer/>

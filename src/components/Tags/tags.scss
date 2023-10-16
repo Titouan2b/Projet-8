@@ -1,0 +1,20 @@
+@import "../../styles/var.scss";
+
+.tags{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+
+    & .tag-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        width: 115px;
+        height: 25px;
+        background-color: $main-color;
+        color: white;
+        font-size: 14px;
+    }
+}
